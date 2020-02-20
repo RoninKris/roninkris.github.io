@@ -1,7 +1,6 @@
 let loginForm = document.loginForm;
 let registerForm = document.registerForm;
 
-alert("Test");
 function ValidateForm(){ //This function validates the log in forms
 	if(loginForm.username.value == "" || loginForm.username.value == null){
 		alert("Please enter a username");

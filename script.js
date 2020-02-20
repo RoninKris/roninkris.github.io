@@ -10,11 +10,15 @@ function ValidateForm(){ //This function validates the log in forms
 		return true;
 	}
 }
-
+let shown = false;
 function ShowNavbar(){
-	console.log("Scrolled");
-	let navStyle = document.querySelector("nav").style;
-	navStyle.backgroundColor = "black";
-	navStyle.opacity = "0.5";
+	if(!shown){
+		let navStyle = document.querySelector("nav").style;
+		navStyle.backgroundColor = "black";
+		navStyle.transition = "0.5s";
+		navStyle.opacity = "0.8";
+		location.href+="#main";
+		shown = true;
+	}
 }
 

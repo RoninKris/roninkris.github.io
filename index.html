@@ -15,7 +15,7 @@
 			<a href=""><li>ABOUT US</li></a>
 			<a href=""><li>CONTACT</li></a>
 			<a href=""><li>RESERVATION</li></a>
-			<a href=""><li>SIGN UP/ LOG IN</li></a>
+			<a onclick="return ShowLogin()"><li>LOG IN</li></a>
 		</ul>
 	</nav>
 	<img src="Images/header4.png" id="imageHeader">
@@ -76,6 +76,19 @@
 				</p>
 			</div>
 		</div>
+	</div>
+	
+	<div class="login">
+		<form>
+			<center><h1>Log in</h1></center> <br>
+			<input type="text" name="username" placeholder="Email Address/Username" id="username-box"><br>
+			<input type="text" name="password" placeholder="Password" id="password-box">
+			<a href="" id="no-account">Don't have an account?</a>
+			<center><input type="submit" name="submit-button" id="submit-button" value="Log in"> <br>
+			<a onclick="return HideLogin()" id="continue-button">Continue Browsing</a>
+			</center>
+		</form>
+		
 	</div>
 
 	<footer>

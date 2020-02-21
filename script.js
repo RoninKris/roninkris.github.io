@@ -22,3 +22,17 @@ function ShowNavbar(){
 	}
 }
 
+function ShowLogin(){
+	let loginDiv = document.querySelector(".login");
+	loginDiv.style.transition = ".5s";
+	loginDiv.style.top = "15%";
+	return true;
+}
+
+function HideLogin(){
+	let loginDiv = document.querySelector(".login");
+	loginDiv.style.transition = ".5s";
+	loginDiv.style.top = "100%";
+	return true;
+}
+

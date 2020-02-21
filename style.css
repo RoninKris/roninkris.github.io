@@ -27,6 +27,7 @@ nav ul li{
 nav ul a{
 	text-decoration: none;
 	color: white;
+	cursor: pointer;
 }
 nav ul a:hover{
 	color: #555;
@@ -124,6 +125,42 @@ footer{
 	color: white;
 	padding: 20px 40px;
 	width: 100;
+}
+
+.login{
+	height: 500px;
+	position: fixed;
+	top: 15%;
+	/* top: 100%; */
+	left: 33%;
+	width: 30%;
+	padding: 10px 40px;
+	background-color: white;
+	box-shadow: 0px 0px 50px #111;
+}
+#username-box, #password-box{
+	width: 100%;
+	border: none;
+	border-bottom: 1px solid black;
+	margin-top: 45px; 
+	height: 25px;
+}
+.login input:focus{
+	border-bottom: 2px solid #37BEE5;
+}
+#no-account{
+	float: right;
+	margin-top: 5px;
+}
+#submit-button{
+	margin-top: 50px;
+	width: 100%;
+	padding: 15px 0px;
+	margin-bottom: 50px;
+}
+#continue-button{
+	text-decoration: underline;
+	cursor: pointer;
 }
 footer img{
 	width: 50px;

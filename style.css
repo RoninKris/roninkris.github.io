@@ -130,8 +130,8 @@ footer{
 .login{
 	height: 500px;
 	position: fixed;
-	top: 15%;
-	/* top: 100%; */
+	/* top: 15%; */
+	top: 100%;
 	left: 33%;
 	width: 30%;
 	padding: 10px 40px;

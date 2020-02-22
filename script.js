@@ -1,15 +1,3 @@
-let loginForm = document.loginForm;
-let registerForm = document.registerForm;
-
-function ValidateForm(){ //This function validates the log in forms
-	if(loginForm.username.value == "" || loginForm.username.value == null){
-		alert("Please enter a username");
-		return false;
-	}
-	else if(loginForm.password.value < 6 && loginForm.username.value != null || loginForm.username.value != ""){
-		return true;
-	}
-}
 let shown = false;
 function ShowNavbar(){
 	if(!shown){
@@ -33,6 +21,42 @@ function HideLogin(){
 	let loginDiv = document.querySelector(".login");
 	loginDiv.style.transition = ".5s";
 	loginDiv.style.top = "100%";
+	document.querySelector("#username-span").innerHTML = "";
+	document.querySelector("#username-box").style.border = "none";
+	document.querySelector("#username-box").style.borderBottom = "1px solid black";
+
+	document.querySelector("#password-span").innerHTML = "";
+	document.querySelector("#password-box").style.border = "none";
+	document.querySelector("#password-box").style.borderBottom = "1px solid black";
+	//Clear input boxes when hidden
 	return true;
 }
 
+
+function Login(){
+	let loginForm = document.loginForm;
+	const accounts = [
+	["Admin", "Ronin", "Jhane"],
+	["admin123", "Password", "Password05"]
+	];
+
+	if(loginForm.username.value == null || loginForm.username.value == ""){
+		document.querySelector("#username-span").innerHTML = "Username cannot be blank";
+		document.querySelector("#username-box").style.border = "2px solid red";
+		return false;
+	}
+	else if(loginForm.password.value == null || loginForm.password.value == ""){
+		document.querySelector("#password-span").innerHTML = "Password cannot be blank";
+		document.querySelector("#password-box").style.border = "2px solid red";
+		return false;
+	}
+	else if(loginForm.username.value == accounts[0][0] && loginForm.password.value == accounts[1][0]){
+			document.querySelector("#login-li").innerHTML = accounts[0][0].toUpperCase();
+			HideLogin();
+			return true;
+	}
+	else{
+		alert(accounts[0][0] + " " + accounts[1][0]);
+		return false;
+	}
+}

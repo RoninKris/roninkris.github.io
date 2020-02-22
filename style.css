@@ -40,32 +40,6 @@ nav ul{
 	max-width: 100%;
 	height: auto;
 }
-.headerOverlay{
-	position: absolute;
-	color: white;
-	top: 45%;
-	left: 45%;
-}
-.headerOverlay a:hover{
-	opacity: 1;
-	transition: 1s;
-}
-.headerOverlay	h1{
-	font-size: 50px;
-	margin-bottom: 50px;
-	margin-left: -95px;
-	font-family: Lucida Calligraphy;
-}
-.headerOverlay img{
-	width: 100px;
-	transform: rotate(90deg);
-	margin-top: 100px;
-	opacity: .7;
-}
-.headerOverlay img:hover{
-	opacity: 1;
-	transition: .5s;
-}
 
 #main{
 	color: white;
@@ -145,8 +119,11 @@ footer{
 	margin-top: 45px; 
 	height: 25px;
 }
-.login input:focus{
-	border-bottom: 2px solid #37BEE5;
+#username-box:focus, #password-box:focus{
+	border-bottom: 3px solid #FF6767;
+}
+#username-span, #password-span{
+	color: red;
 }
 #no-account{
 	float: right;

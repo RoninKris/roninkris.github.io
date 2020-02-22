@@ -15,14 +15,10 @@
 			<a href=""><li>ABOUT US</li></a>
 			<a href=""><li>CONTACT</li></a>
 			<a href=""><li>RESERVATION</li></a>
-			<a onclick="return ShowLogin()"><li>LOG IN</li></a>
+			<a onclick="return ShowLogin()"><li id="login-li">LOG IN</li></a>
 		</ul>
 	</nav>
-	<img src="Images/header4.png" id="imageHeader">
-	<div class="headerOverlay">
-		<h1>Niorn's Cafe</h1>
-		<!-- <a href="#main"> --><img src="Images/continue-button.png"><!-- </a> -->
-	</div>
+	<img src="Images/image-header.png" id="imageHeader">
 	<div id="main">
 		<!-- Start of box -->
 		<div class="box-container">
@@ -79,10 +75,10 @@
 	</div>
 	
 	<div class="login">
-		<form>
+		<form onsubmit="return Login()" name="loginForm" action="">
 			<center><h1>Log in</h1></center> <br>
-			<input type="text" name="username" placeholder="Email Address/Username" id="username-box"><br>
-			<input type="text" name="password" placeholder="Password" id="password-box">
+			<input type="text" name="username" placeholder="Email Address/Username" id="username-box"> <span id="username-span"></span><br>
+			<input type="password" name="password" placeholder="Password" id="password-box"> <span id="password-span"></span>
 			<a href="" id="no-account">Don't have an account?</a>
 			<center><input type="submit" name="submit-button" id="submit-button" value="Log in"> <br>
 			<a onclick="return HideLogin()" id="continue-button">Continue Browsing</a>

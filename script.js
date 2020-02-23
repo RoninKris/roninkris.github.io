@@ -24,10 +24,12 @@ function HideLogin(){
 	document.querySelector("#username-span").innerHTML = "";
 	document.querySelector("#username-box").style.border = "none";
 	document.querySelector("#username-box").style.borderBottom = "1px solid black";
+	document.querySelector("#username-box").value = "";
 
 	document.querySelector("#password-span").innerHTML = "";
 	document.querySelector("#password-box").style.border = "none";
 	document.querySelector("#password-box").style.borderBottom = "1px solid black";
+	document.querySelector("#password-box").value = "";
 	//Clear input boxes when hidden
 }
 
@@ -51,17 +53,17 @@ function Login(){
 	else if(loginForm.username.value == accounts[0][0] && loginForm.password.value == accounts[1][0]){
 			document.querySelector("#login-li").innerHTML = accounts[0][0].toUpperCase();
 			HideLogin();
-			return true;
+			return false
 	}
 	else if(loginForm.username.value == accounts[0][1] && loginForm.password.value == accounts[1][1]){
 			document.querySelector("#login-li").innerHTML = accounts[0][1].toUpperCase();
 			HideLogin();
-			return true;
+			return false
 	}
 	else if(loginForm.username.value == accounts[0][2] && loginForm.password.value == accounts[1][2]){
 			document.querySelector("#login-li").innerHTML = accounts[0][2].toUpperCase();
 			HideLogin();
-			return true;
+			return false
 	}
 	else{
 		alert(accounts[0][0] + " " + accounts[1][0]);

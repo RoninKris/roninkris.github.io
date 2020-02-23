@@ -9,12 +9,15 @@ function ShowNavbar(){
 		shown = true;
 	}
 }
-
+let loggedIn;
 function ShowLogin(){
-	let loginDiv = document.querySelector(".login");
-	loginDiv.style.transition = ".5s";
-	loginDiv.style.top = "15%";
-	return true;
+	if(!loggedIn){
+		let loginDiv = document.querySelector(".login");
+		loginDiv.style.transition = ".5s";
+		loginDiv.style.top = "15%";
+	}
+	else document.querySelector("#login-li").innerHTML = "LOG IN";
+	
 }
 
 function HideLogin(){
@@ -51,18 +54,21 @@ function Login(){
 		return false;
 	}
 	else if(loginForm.username.value == accounts[0][0] && loginForm.password.value == accounts[1][0]){
-			document.querySelector("#login-li").innerHTML = accounts[0][0].toUpperCase();
+			document.querySelector("#login-li").innerHTML = "LOG OUT";
 			HideLogin();
+			loggedIn = true;
 			return false
 	}
 	else if(loginForm.username.value == accounts[0][1] && loginForm.password.value == accounts[1][1]){
-			document.querySelector("#login-li").innerHTML = accounts[0][1].toUpperCase();
+			document.querySelector("#login-li").innerHTML = "LOG OUT";
 			HideLogin();
+			loggedIn = true;
 			return false
 	}
 	else if(loginForm.username.value == accounts[0][2] && loginForm.password.value == accounts[1][2]){
-			document.querySelector("#login-li").innerHTML = accounts[0][2].toUpperCase();
+			document.querySelector("#login-li").innerHTML = "LOG OUT";
 			HideLogin();
+			loggedIn = true;
 			return false
 	}
 	else{

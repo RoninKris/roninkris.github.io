@@ -151,8 +151,24 @@ nav{
 video{
 	width: 100%;
 }
-#about{
+.main{
 	background-color: white;
 	width: 100%;
-	padding: 50px 100px;
+	height: auto;
+}
+#about{
+	align-items: center;
+	background-color: white;
+	width: 50%;
+	margin: 0px 25%;
+	padding: 100px 0px;
+	text-align: justify;
+}
+#about h1{
+	font-size: 50px;
+	margin-bottom: 50px
+}
+#about p{
+	font-size: 25px;
+	line-height: 30px;
 }

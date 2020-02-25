@@ -1,5 +1,5 @@
+let shown = false;
 function ShowNavbar(){
-	let shown = false;
 	if(!shown){
 		let navStyle = document.querySelector("nav").style;
 		navStyle.backgroundColor = "black";
@@ -70,6 +70,7 @@ function ValidateLoginForm(correct){
 		document.querySelector("#password-span").innerHTML = "Password cannot be blank";
 		document.querySelector("#password-box").style.border = "2px solid red";
 	}
+	//Checks if the forms have values and if the entered username/pass is correct
 	else if(loginForm.username.value != null || loginForm.username.value != "" && loginForm.password.value != null || loginForm.password.value != "" && !correct){
 		document.querySelector("#username-span").innerHTML = "Username or Password incorrect";
 		document.querySelector("#username-box").style.border = "2px solid red";
@@ -84,4 +85,8 @@ function ValidateLoginForm(correct){
 	}
 
 	return false;
+}
+
+function GotoMenu(){
+	window.open("menu.html");
 }

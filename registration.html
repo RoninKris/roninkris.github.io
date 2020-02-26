@@ -1,24 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<title>Register</title>
 	<script type="text/javascript" src="script.js"></script>
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<title>
-		Log in/Register
-	</title>
+	<style type="text/css">
+		html{
+			overflow-y: hidden;
+		}
+	</style>
 </head>
 <body>
-	<form name="loginForm" onsubmit="return validateForm()">
-		<div class="login">
-			Username: <br>
-			<input type="text" name="username"><br>
-			Password: <br>
-			<input type="password" name="password"> <br>
-			<input type="submit" name="submitButton" value="Okay">
-		</div>
-	</form>
-	<form name="registerForm">
-		<div class="register"></div>
-	</form>
+	<img src="Images/image-header.png" id="imageHeader">
+	<div class="register">
+		<form onsubmit="return Register()" name="loginForm" action="index.html">
+			<center><h1>Register</h1> <br>
+			<span id="validator"></span>
+			</center>
+			<input type="text" name="usernameRegister" placeholder="Enter Username" id="username-register" onkeyup="ValidateUsername()" tag="registerInputs"> <span id="username-span"></span><br>
+
+			<input type="text" name="emailRegister" placeholder="Enter Email Address" id="email-box" onkeyup="ValidateEmail()" tag="registerInputs">
+
+			<input type="password" name="passwordRegister" placeholder="Enter Password" id="password-box" onkeyup="ValidatePassword()" tag="registerInputs"> <span id="password-span"></span>
+
+			<input type="password" name="confirmPasswordRegister" placeholder="Confirm Password" id="confirmPassword-box" onkeyup="ValidateConfirmPassword()" tag="registerInputs"> <span id="password-span"></span>
+
+			<a href="index.html" id="no-account">Already have an account?</a>
+
+			<center><input type="submit" name="submit-button" id="submit-button" value="Sign up">
+			</center>
+		</form>
+		
+	</div>
 </body>
 </html>

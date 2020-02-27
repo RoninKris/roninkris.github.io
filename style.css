@@ -154,7 +154,7 @@ footer img{
 	width: 50px;
 }
 /* Added CSS for about.html */
-nav{
+#about-nav, .sticky-nav{
 	background-color: black;
 	opacity: 0.8;
 }
@@ -185,4 +185,73 @@ video{
 /*  registration.html */
 #validator{
 	color: red;
+}
+/* forum.html */
+.sticky-nav{
+	width: 100%;
+	height: 50px;
+	position: sticky;
+	padding-top: 15px;
+	top: 0;
+}
+.sticky-nav ul li{
+	display: inline;
+	margin-right: 20px;
+}
+
+.sticky-nav ul a{
+	text-decoration: none;
+	color: white;
+	cursor: pointer;
+}
+.sticky-nav ul a:hover{
+	color: #555;
+}
+.sticky-nav ul{
+	float: right;
+}
+#topOfNav{
+	text-align: center;
+	color: black;
+	padding: 25px 0px;
+	width: 100%;
+	background-color: #AAA;
+}
+.main-forum{
+	height: auto;
+	margin-left: 10%;
+	width: 75%;
+	padding: 10px 40px;
+	box-shadow: 0px 0px 50px #111;
+}
+
+.post{
+	padding: 10px;
+	border: 1px solid #7B7B7B;
+	margin-bottom: 25px;
+	background-color: white;
+	height: auto;
+	min-height: 200px;
+}
+.post h3{
+	font-family: Arial;
+	font-weight: bold; 
+	margin-bottom: 15px;
+}
+.post p{
+	font-family: Arial;
+	margin-left: 20px;
+}
+.post hr{
+	margin: 25px 0px;
+}
+.post textarea{
+	margin-left: 20px;
+	resize: none;
+	border-radius: 10px;
+	width: 250px;
+	padding-top: 10px;
+	padding-left: 5px;
+	font-family: Arial;
+	background-color: #EAEAEA;
 }

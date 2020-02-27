@@ -106,12 +106,12 @@ function ValidateEmail(){
 	let form = document.loginForm;
 	let emailBox = form.emailRegister;
 	let i = 0;
-	let atPosition = emailBox.value.indexOf("@");
-	let dotPosition = emailBox.value.lastIndexOf(".");
+	let atPosition = emailBox.value.indexOf('@');
+	let dotPosition = emailBox.value.lastIndexOf('.');
 	for(atPosition; atPosition < dotPosition; atPosition++){
 		i++;
 	}
-	if(i == 6 && emailBox.value.includes(".") && emailBox.value.includes("@")){
+	if(i == 6 && atPosition >= 15 && emailBox.value.includes(".") && emailBox.value.includes("@")){
 		emailBox.style.border = "2px solid #3BD43B";
 		return true;
 	}
@@ -120,7 +120,6 @@ function ValidateEmail(){
 		return false;
 	}
 }
-
 function ValidateUsername(){
 	let form = document.loginForm;
 	let usernameBox = form.usernameRegister;
@@ -158,5 +157,15 @@ function ValidateConfirmPassword(){
 	else{
 		confirmPasswordBox.style.border = "2px solid #FFC600";
 		return false;
+	}
+}
+
+function CreatePost(){
+	let post = [
+		["Admin", "Ronin Navoa", "Jhane Doe", "John Doe"],
+		["Please avoid profanity and keep the page clean. Thank you.", "The reason why I love this place so much is because of its atmosphere. This place feels so clean and the aroma of the coffee makes it relaxing. I love this place so much.", "I love this place so much. I always go to this place whenever I feel stressed. Thank you Niorn's Cafe!", "I use this place as a meeting place in every errand I take."]
+	];
+	for(let i = 0; i < 3; i++){
+		document.querySelector(".main-forum").innerHTML+= '<div class="post"><h3 id="username-forum">' + post[0][i] + '</h3><p>' + post[1][i] + '</p><hr> <textarea placeholder="Write a comment..."></textarea></div>';
 	}
 }

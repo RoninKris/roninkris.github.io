@@ -33,7 +33,18 @@
 		</div>
 
 	</div>
-
+	<div class="login">
+		<form onsubmit="return Login()" name="loginForm" action="">
+			<center><h1>Log in</h1></center> <br>
+			<input type="text" name="username" placeholder="Email Address/Username" id="username-box"> <span id="username-span"></span><br>
+			<input type="password" name="password" placeholder="Password" id="password-box"> <span id="password-span"></span>
+			<a href="registration.html" id="no-account">Don't have an account?</a>
+			<center><input type="submit" name="submit-button" id="submit-button" value="Log in"> <br>
+			<a onclick="HideLogin()" id="continue-button">Continue Browsing</a>
+			</center>
+		</form>
+		
+	</div>
 	<footer>
 		Contact us on:<br>
 		<img src="Images/fb-logo.png">
